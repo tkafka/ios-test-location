@@ -474,8 +474,6 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = testLocation/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "Test location";
-				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "We need to know where you are.";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We need to know where you are.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -510,8 +508,6 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = testLocation/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "Test location";
-				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "We need to know where you are.";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We need to know where you are.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
