@@ -11,28 +11,37 @@ import SwiftUI
 
 struct LocationView: View {
 	let locationManager: LocationManager2
-	@State private var result: Result<CLLocationCoordinate2D, Error>?
+	@State private var result: Result<CLLocationCoordinate2D, Error>? = nil
+	@State private var authorizationStatus: CLAuthorizationStatus? = nil
 
 	var body: some View {
 		VStack {
 			if let result {
 				switch result {
 				case let .success(location):
-					Text("\(location.debug())")
+					Text("Loc: \(location.debug())")
 				case let .failure(error):
-					Text("\(error.localizedDescription)")
+					Text("Error: \(error.localizedDescription)")
 				}
+			}
+			
+			if let authorizationStatus {
+				Text("Status: \(authorizationStatus.debug())")
 			}
 			
 			Button {
 				Task {
+					let context: ForegroundOrBackground = .foreground
 					let location = await locationManager.getCurrentLocation(
-						context: .foreground,
+						context: context,
 						timeout: 15,
 						allowRetries: false,
 						authorizationChangedCompletion: { _ in
 						}
 					)
+					
+					authorizationStatus = self.locationManager.getCurrentAuthorization(context: context)
+					
 					switch location.response {
 					case let .success(source, location):
 						Logger.app.info("Location success: \(source.debug()), location = \(location.debug())")
