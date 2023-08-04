@@ -1,0 +1,47 @@
+--swiftversion 5
+
+--indent tabs
+--linebreaks lf
+--maxwidth none
+--tabwidth 2
+
+--disable redundantClosure,redundantLet
+
+--redundanttype explicit
+--allman false
+--binarygrouping none
+--closingparen balanced
+--commas inline
+--conflictmarkers reject
+--decimalgrouping none
+--elseposition same-line
+--empty void
+--exponentcase lowercase
+--exponentgrouping disabled
+--fractiongrouping disabled
+--fragment false
+--header ignore
+--hexgrouping none
+--hexliteralcase uppercase
+--ifdef no-indent
+--importgrouping alphabetized
+
+--decimalgrouping ignore
+
+--indentcase false
+--maxwidth none
+--nospaceoperators
+--octalgrouping none
+--operatorfunc spaced
+--patternlet hoist
+
+--semicolons never
+--stripunusedargs closure-only
+--trailingclosures
+--trimwhitespace nonblank-lines
+--wraparguments before-first
+--wrapcollections before-first
+--xcodeindentation disabled
+
+# this caused error but it's fixed now: https://github.com/nicklockwood/SwiftFormat/issues/975
+--self insert
