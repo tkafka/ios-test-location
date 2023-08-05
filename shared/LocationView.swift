@@ -11,11 +11,14 @@ import SwiftUI
 
 struct LocationView: View {
 	let locationManager: LocationManager2
+	let context: ForegroundOrBackground = .foreground
+	
+	@State private var isLoading: Bool = false
 	@State private var result: Result<CLLocationCoordinate2D, Error>? = nil
 	@State private var authorizationStatus: CLAuthorizationStatus? = nil
 
 	var body: some View {
-		VStack {
+		VStack(spacing: 16) {
 			if let result {
 				switch result {
 				case let .success(location):
@@ -26,34 +29,46 @@ struct LocationView: View {
 			}
 			
 			if let authorizationStatus {
-				Text("Status: \(authorizationStatus.debug())")
+				Text("Loc auth: \(authorizationStatus.debug())")
 			}
 			
 			Button {
+				self.isLoading = true
 				Task {
-					let context: ForegroundOrBackground = .foreground
 					let location = await locationManager.getCurrentLocation(
-						context: context,
+						context: self.context,
 						timeout: 15,
 						allowRetries: false,
 						authorizationChangedCompletion: { _ in
 						}
 					)
 					
-					authorizationStatus = self.locationManager.getCurrentAuthorization(context: context)
-					
-					switch location.response {
-					case let .success(source, location):
-						Logger.app.info("Location success: \(source.debug()), location = \(location.debug())")
-						self.result = .success(location.coordinate)
-					case let .failure(error):
-						Logger.app.error("Location failure: \(error.localizedDescription)")
-						self.result = .failure(error)
+					Task { @MainActor in
+						authorizationStatus = self.locationManager.getCurrentAuthorization(context: self.context)
+						
+						switch location.response {
+						case let .success(source, location):
+							Logger.app.info("Location success: \(source.debug()), location = \(location.debug())")
+							self.result = .success(location.coordinate)
+						case let .failure(error):
+							Logger.app.error("Location failure: \(error.localizedDescription)")
+							self.result = .failure(error)
+						}
+						
+						self.isLoading = false
 					}
 				}
 			} label: {
-				Text("Get location")
+				HStack(spacing: 8) {
+					Text("Get location")
+					ProgressView()
+						.progressViewStyle(.circular)
+						.opacity(self.isLoading ? 1 : 0)
+				}
 			}
+		}
+		.onAppear {
+			self.authorizationStatus = self.locationManager.getCurrentAuthorization(context: self.context)
 		}
 	}
 }
