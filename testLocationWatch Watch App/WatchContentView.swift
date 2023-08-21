@@ -16,10 +16,11 @@ struct WatchContentView: View {
 				.imageScale(.large)
 				.foregroundStyle(.tint)
 			
-			PushNotificationView()
-			
-			LocationView(locationManager: self.locationManager)
+			Form {
+				PushNotificationView()
+				
+				LocationView(locationManager: self.locationManager)
+			}
 		}
-		.padding()
 	}
 }

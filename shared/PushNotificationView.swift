@@ -27,10 +27,7 @@ struct PushNotificationView: View {
 	}
 	
 	public var body: some View {
-		VStack {
-			Text("Push notifications")
-				.font(.title)
-			
+		Section(header: Text("Push notifications")) {
 			if let authorizationState {
 				Text("Authorization state: \(authorizationState.debug())")
 			}

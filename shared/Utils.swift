@@ -84,3 +84,46 @@ extension UNAuthorizationStatus: DebugPrintable {
 		}
 	}
 }
+
+extension Dictionary where Key == AnyHashable, Value == Any {
+	func asJson() -> String {
+		var jsonString = "{\n"
+		for (key, value) in self {
+			let valueString: String
+			if let stringVal = value as? String {
+				valueString = "\"\(stringVal)\""
+			} else {
+				valueString = "\(value)"
+			}
+			jsonString += "  \"\(key)\": \(valueString),\n"
+		}
+		jsonString = String(jsonString.dropLast(2)) // Remove trailing comma and newline
+		jsonString += "\n}"
+		return jsonString
+	}
+}
+
+extension Dictionary where Key == String, Value == AnyObject {
+	func asJson() -> String {
+		var jsonString = "{\n"
+		for (key, value) in self {
+			let valueString: String = "\(value)"
+			jsonString += "  \"\(key)\": \(valueString),\n"
+		}
+		jsonString = String(jsonString.dropLast(2)) // Remove trailing comma and newline
+		jsonString += "\n}"
+		return jsonString
+	}
+}
+
+extension String {
+	func asIsoDate() -> Date? {
+		let formatter = DateFormatter()
+		formatter.locale = Locale(identifier: "en_US_POSIX")
+		formatter.timeZone = TimeZone(secondsFromGMT: 0)
+		// formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
+		formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZZZZZ"
+		let date = formatter.date(from: self)
+		return date
+	}
+}

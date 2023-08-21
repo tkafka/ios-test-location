@@ -18,10 +18,7 @@ struct LocationView: View {
 	@State private var authorizationStatus: CLAuthorizationStatus? = nil
 
 	var body: some View {
-		VStack {
-			Text("Location")
-				.font(.title)
-			
+		Section(header: Text("Location")) {
 			if let result {
 				switch result {
 				case let .success(location):

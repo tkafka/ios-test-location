@@ -18,13 +18,12 @@ struct testLocationWatch_Watch_AppApp: App {
 		let center = UNUserNotificationCenter.current()
 		center.delegate = self.notificationDelegate
 		// requestNotificationAuthorization()
+		print("Notification delegate registered")
 	}
 
 	var body: some Scene {
 		WindowGroup {
-			VStack {
-				WatchContentView()
-			}
+			WatchContentView()
 		}
 	}
 }
