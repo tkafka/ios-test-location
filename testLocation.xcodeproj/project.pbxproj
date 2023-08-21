@@ -14,7 +14,7 @@
 		3D70C5DD2A936A4A003E2527 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D70C5DC2A936A4A003E2527 /* AppDelegate.swift */; };
 		3D70C5E02A9379B4003E2527 /* NotificationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D70C5DF2A9379B4003E2527 /* NotificationDelegate.swift */; };
 		3D70C5E12A9379B4003E2527 /* NotificationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D70C5DF2A9379B4003E2527 /* NotificationDelegate.swift */; };
-		3D70C5E32A937B7A003E2527 /* WatchExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D70C5E22A937B7A003E2527 /* WatchExtensionDelegate.swift */; };
+		3D70C5E32A937B7A003E2527 /* WatchApplicationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D70C5E22A937B7A003E2527 /* WatchApplicationDelegate.swift */; };
 		3D70C5E52A937CE6003E2527 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 3D70C5E42A937CE6003E2527 /* README.md */; };
 		3D70C5E72A9380BF003E2527 /* OpenSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D70C5E62A9380BF003E2527 /* OpenSettingsView.swift */; };
 		3D7805F82A7DA8470077C985 /* testLocationApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7805F72A7DA8470077C985 /* testLocationApp.swift */; };
@@ -83,7 +83,7 @@
 		3D70C5D92A936257003E2527 /* PushNotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushNotificationView.swift; sourceTree = "<group>"; };
 		3D70C5DC2A936A4A003E2527 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3D70C5DF2A9379B4003E2527 /* NotificationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationDelegate.swift; sourceTree = "<group>"; };
-		3D70C5E22A937B7A003E2527 /* WatchExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchExtensionDelegate.swift; sourceTree = "<group>"; };
+		3D70C5E22A937B7A003E2527 /* WatchApplicationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchApplicationDelegate.swift; sourceTree = "<group>"; };
 		3D70C5E42A937CE6003E2527 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		3D70C5E62A9380BF003E2527 /* OpenSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenSettingsView.swift; sourceTree = "<group>"; };
 		3D7805F42A7DA8470077C985 /* testLocation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testLocation.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -178,7 +178,7 @@
 				3D70C5D82A9361B1003E2527 /* testLocationWatch Watch App.entitlements */,
 				3D546D172A7DB2B500492694 /* testLocationWatch-Watch-App-Info.plist */,
 				3D78060D2A7DA8600077C985 /* testLocationWatchApp.swift */,
-				3D70C5E22A937B7A003E2527 /* WatchExtensionDelegate.swift */,
+				3D70C5E22A937B7A003E2527 /* WatchApplicationDelegate.swift */,
 				3D78060F2A7DA8600077C985 /* WatchContentView.swift */,
 				3D7806112A7DA8650077C985 /* Assets.xcassets */,
 				3D7806132A7DA8650077C985 /* Preview Content */,
@@ -350,7 +350,7 @@
 				3D70C5DB2A936257003E2527 /* PushNotificationView.swift in Sources */,
 				3D7806102A7DA8600077C985 /* WatchContentView.swift in Sources */,
 				3D7806382A7DAD4C0077C985 /* UtilsAsync.swift in Sources */,
-				3D70C5E32A937B7A003E2527 /* WatchExtensionDelegate.swift in Sources */,
+				3D70C5E32A937B7A003E2527 /* WatchApplicationDelegate.swift in Sources */,
 				3D7806202A7DA8C00077C985 /* LocationManager2.swift in Sources */,
 				3D7806322A7DAA0F0077C985 /* Logger.swift in Sources */,
 				3D7806352A7DACA50077C985 /* Constants.swift in Sources */,

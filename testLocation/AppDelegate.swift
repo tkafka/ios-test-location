@@ -22,18 +22,19 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 			let center = UNUserNotificationCenter.current()
 			let authorizationStatus = await center.notificationSettings().authorizationStatus
 								
-			if authorizationStatus == .authorized {
-				await MainActor.run {
-					application.registerForRemoteNotifications()
-					print("Registered for remote notifications")
-				}
-			} else {
-				print("Not authorized (\(authorizationStatus.debug())), not registering for remote notifications.")
+			// if authorizationStatus == .authorized {
+			await MainActor.run {
+				application.registerForRemoteNotifications()
+				print("Registered for remote notifications")
 			}
+			// } else {
+			//	print("Not authorized (\(authorizationStatus.debug())), not registering for remote notifications.")
+			// }
 		}
 		
 		let notificationOption = launchOptions?[.remoteNotification]
 		if let notification = notificationOption as? [String: AnyObject] {
+			// TODO: Parse date here as well!
 			print("Application.didFinishLaunchingWithOptions: \(notification.asJson())")
 		}
 		
