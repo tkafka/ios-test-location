@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  WatchContentView.swift
 //  testLocationWatch Watch App
 //
 //  Created by Tomas Kafka on 04.08.2023.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct WatchContentView: View {
 	let locationManager: LocationManager2 = .init(withAccuracy: .threeKilometers, platformAllowsBackgroundUpdates: true)
 
 	var body: some View {

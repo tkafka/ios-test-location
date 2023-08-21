@@ -1,5 +1,5 @@
 //
-//  Item.swift
+//  LocationItem.swift
 //  testLocation
 //
 //  Created by Tomas Kafka on 04.08.2023.

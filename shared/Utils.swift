@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UserNotifications
 
 public extension Array {
 	/*
@@ -62,5 +63,24 @@ public extension Error {
 		}
 
 		return "\(message)\(codeExtra)"
+	}
+}
+
+extension UNAuthorizationStatus: DebugPrintable {
+	public func debug() -> String {
+		switch self {
+		case .notDetermined:
+			return "notDetermined"
+		case .denied:
+			return "denied"
+		case .authorized:
+			return "authorized"
+		case .provisional:
+			return "provisional"
+		case .ephemeral:
+			return "ephemeral"
+		@unknown default:
+			return "unknown(\(self.rawValue))"
+		}
 	}
 }

@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct testLocationApp: App {
+	@UIApplicationDelegateAdaptor(AppDelegate.self)
+	private var appDelegate
+	
 	var body: some Scene {
 		WindowGroup {
-			ContentView()
+			AppContentView()
 		}
 	}
 }

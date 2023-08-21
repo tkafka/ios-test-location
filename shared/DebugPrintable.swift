@@ -1,5 +1,5 @@
 //
-//  DebugPrint.swift
+//  DebugPrintable.swift
 //  Weathergraph Independent
 //
 //  Created by Tomas Kafka on 12.07.2021.

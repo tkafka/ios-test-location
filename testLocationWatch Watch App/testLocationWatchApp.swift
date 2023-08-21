@@ -11,7 +11,9 @@ import SwiftUI
 struct testLocationWatch_Watch_AppApp: App {
 	var body: some Scene {
 		WindowGroup {
-			ContentView()
+			VStack {
+				WatchContentView()
+			}
 		}
 	}
 }
