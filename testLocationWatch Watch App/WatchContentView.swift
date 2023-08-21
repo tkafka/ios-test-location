@@ -15,6 +15,9 @@ struct WatchContentView: View {
 			Image(systemName: "globe")
 				.imageScale(.large)
 				.foregroundStyle(.tint)
+			
+			PushNotificationView()
+			
 			LocationView(locationManager: self.locationManager)
 		}
 		.padding()

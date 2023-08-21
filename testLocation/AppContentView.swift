@@ -12,8 +12,14 @@ struct AppContentView: View {
 	let locationManager: LocationManager2 = .init(withAccuracy: .threeKilometers, platformAllowsBackgroundUpdates: true)
 	
 	var body: some View {
-		PushNotificationView()
-		
-		LocationView(locationManager: self.locationManager)
+		VStack {
+			Image(systemName: "globe")
+				.imageScale(.large)
+				.foregroundStyle(.tint)
+			
+			PushNotificationView()
+			
+			LocationView(locationManager: self.locationManager)
+		}
 	}
 }

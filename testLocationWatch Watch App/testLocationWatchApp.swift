@@ -6,9 +6,20 @@
 //
 
 import SwiftUI
+import UserNotifications
 
 @main
 struct testLocationWatch_Watch_AppApp: App {
+	@WKApplicationDelegateAdaptor private var appDelegate: WatchExtensionDelegate
+	
+	let notificationDelegate = NotificationDelegate()
+	
+	init() {
+		let center = UNUserNotificationCenter.current()
+		center.delegate = self.notificationDelegate
+		// requestNotificationAuthorization()
+	}
+
 	var body: some Scene {
 		WindowGroup {
 			VStack {

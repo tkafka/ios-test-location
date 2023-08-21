@@ -12,6 +12,10 @@
 		3D70C5DA2A936257003E2527 /* PushNotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D70C5D92A936257003E2527 /* PushNotificationView.swift */; };
 		3D70C5DB2A936257003E2527 /* PushNotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D70C5D92A936257003E2527 /* PushNotificationView.swift */; };
 		3D70C5DD2A936A4A003E2527 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D70C5DC2A936A4A003E2527 /* AppDelegate.swift */; };
+		3D70C5E02A9379B4003E2527 /* NotificationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D70C5DF2A9379B4003E2527 /* NotificationDelegate.swift */; };
+		3D70C5E12A9379B4003E2527 /* NotificationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D70C5DF2A9379B4003E2527 /* NotificationDelegate.swift */; };
+		3D70C5E32A937B7A003E2527 /* WatchExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D70C5E22A937B7A003E2527 /* WatchExtensionDelegate.swift */; };
+		3D70C5E52A937CE6003E2527 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 3D70C5E42A937CE6003E2527 /* README.md */; };
 		3D7805F82A7DA8470077C985 /* testLocationApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7805F72A7DA8470077C985 /* testLocationApp.swift */; };
 		3D7805FA2A7DA8470077C985 /* AppContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7805F92A7DA8470077C985 /* AppContentView.swift */; };
 		3D7805FC2A7DA8470077C985 /* LocationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7805FB2A7DA8470077C985 /* LocationItem.swift */; };
@@ -77,6 +81,9 @@
 		3D70C5D82A9361B1003E2527 /* testLocationWatch Watch App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "testLocationWatch Watch App.entitlements"; sourceTree = "<group>"; };
 		3D70C5D92A936257003E2527 /* PushNotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushNotificationView.swift; sourceTree = "<group>"; };
 		3D70C5DC2A936A4A003E2527 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3D70C5DF2A9379B4003E2527 /* NotificationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationDelegate.swift; sourceTree = "<group>"; };
+		3D70C5E22A937B7A003E2527 /* WatchExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchExtensionDelegate.swift; sourceTree = "<group>"; };
+		3D70C5E42A937CE6003E2527 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		3D7805F42A7DA8470077C985 /* testLocation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testLocation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D7805F72A7DA8470077C985 /* testLocationApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testLocationApp.swift; sourceTree = "<group>"; };
 		3D7805F92A7DA8470077C985 /* AppContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppContentView.swift; sourceTree = "<group>"; };
@@ -122,6 +129,7 @@
 		3D7805EB2A7DA8470077C985 = {
 			isa = PBXGroup;
 			children = (
+				3D70C5E42A937CE6003E2527 /* README.md */,
 				3D546D182A7DB33500492694 /* .gitignore */,
 				3D78063C2A7DAE870077C985 /* .swiftformat */,
 				3D78061D2A7DA8AD0077C985 /* shared */,
@@ -168,6 +176,7 @@
 				3D70C5D82A9361B1003E2527 /* testLocationWatch Watch App.entitlements */,
 				3D546D172A7DB2B500492694 /* testLocationWatch-Watch-App-Info.plist */,
 				3D78060D2A7DA8600077C985 /* testLocationWatchApp.swift */,
+				3D70C5E22A937B7A003E2527 /* WatchExtensionDelegate.swift */,
 				3D78060F2A7DA8600077C985 /* WatchContentView.swift */,
 				3D7806112A7DA8650077C985 /* Assets.xcassets */,
 				3D7806132A7DA8650077C985 /* Preview Content */,
@@ -199,6 +208,7 @@
 				3D7805FB2A7DA8470077C985 /* LocationItem.swift */,
 				3D546D132A7DB0E400492694 /* LocationView.swift */,
 				3D70C5D92A936257003E2527 /* PushNotificationView.swift */,
+				3D70C5DF2A9379B4003E2527 /* NotificationDelegate.swift */,
 			);
 			path = shared;
 			sourceTree = "<group>";
@@ -293,6 +303,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D70C5E52A937CE6003E2527 /* README.md in Resources */,
 				3D7806152A7DA8650077C985 /* Preview Assets.xcassets in Resources */,
 				3D7806122A7DA8650077C985 /* Assets.xcassets in Resources */,
 			);
@@ -311,6 +322,7 @@
 				3D7806282A7DA9390077C985 /* Shared.swift in Sources */,
 				3D7806222A7DA8EB0077C985 /* LocationResult.swift in Sources */,
 				3D7806252A7DA90E0077C985 /* DebugPrintable.swift in Sources */,
+				3D70C5E02A9379B4003E2527 /* NotificationDelegate.swift in Sources */,
 				3D78063A2A7DAD800077C985 /* Utils.swift in Sources */,
 				3D78062E2A7DA9A50077C985 /* Coords.swift in Sources */,
 				3D70C5DD2A936A4A003E2527 /* AppDelegate.swift in Sources */,
@@ -334,10 +346,12 @@
 				3D70C5DB2A936257003E2527 /* PushNotificationView.swift in Sources */,
 				3D7806102A7DA8600077C985 /* WatchContentView.swift in Sources */,
 				3D7806382A7DAD4C0077C985 /* UtilsAsync.swift in Sources */,
+				3D70C5E32A937B7A003E2527 /* WatchExtensionDelegate.swift in Sources */,
 				3D7806202A7DA8C00077C985 /* LocationManager2.swift in Sources */,
 				3D7806322A7DAA0F0077C985 /* Logger.swift in Sources */,
 				3D7806352A7DACA50077C985 /* Constants.swift in Sources */,
 				3D78060E2A7DA8600077C985 /* testLocationWatchApp.swift in Sources */,
+				3D70C5E12A9379B4003E2527 /* NotificationDelegate.swift in Sources */,
 				3D78062C2A7DA98E0077C985 /* UtilsLocation.swift in Sources */,
 				3D7806232A7DA8EB0077C985 /* LocationResult.swift in Sources */,
 				3D7806262A7DA90E0077C985 /* DebugPrintable.swift in Sources */,

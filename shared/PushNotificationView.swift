@@ -45,10 +45,8 @@ struct PushNotificationView: View {
 			
 			Button(action: {
 				Task {
-					let center = UNUserNotificationCenter.current()
-					let success = try await center.requestAuthorization(options: [.alert])
-					
-					if success {
+					let result = await NotificationDelegate.requestNotificationAuthorization()
+					if result {
 						await self.refreshAuthorizationState()
 					}
 				}
