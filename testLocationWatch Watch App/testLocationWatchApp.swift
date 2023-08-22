@@ -23,7 +23,7 @@ struct testLocationWatch_Watch_AppApp: App {
 
 	var body: some Scene {
 		WindowGroup {
-			WatchContentView()
+			WatchContentView(dataStore: .shared)
 		}
 	}
 }

@@ -36,6 +36,7 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 		if let notification = notificationOption as? [String: AnyObject] {
 			// TODO: Parse date here as well!
 			print("Application.didFinishLaunchingWithOptions: \(notification.asJson())")
+			DataStore.shared.saveDataFromUserInfo(userInfo: notification)
 		}
 		
 		return true
@@ -65,16 +66,7 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 	/// If your app was running either in the foreground or the background, the system notifies your app by calling `application(_:didReceiveRemoteNotification:fetchCompletionHandler:)`. When the user opens the app by tapping the push notification, iOS may call this method again, so you can update the UI and display relevant information.
 	func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable: Any]) async -> UIBackgroundFetchResult {
 		print("Received remote notification: \(userInfo.asJson())")
-
-		let dateStr = userInfo["date"] as? String
-		
-		if
-			let dateStr,
-			let date = dateStr.asIsoDate()
-		{
-			print("Remote date is \(date)")
-		}
-		
+		DataStore.shared.saveDataFromUserInfo(userInfo: userInfo)
 		return .newData
 	}
 }

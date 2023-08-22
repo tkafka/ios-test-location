@@ -9,6 +9,8 @@ import SwiftUI
 
 struct WatchContentView: View {
 	let locationManager: LocationManager2 = .init(withAccuracy: .threeKilometers, platformAllowsBackgroundUpdates: true)
+	
+	@ObservedObject var dataStore: DataStore
 
 	var body: some View {
 		VStack {
@@ -18,6 +20,8 @@ struct WatchContentView: View {
 			
 			Form {
 				PushNotificationView()
+				
+				DataView(dataStore: self.dataStore)
 				
 				LocationView(locationManager: self.locationManager)
 			}

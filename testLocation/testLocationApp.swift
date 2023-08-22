@@ -23,7 +23,7 @@ struct testLocationApp: App {
 	
 	var body: some Scene {
 		WindowGroup {
-			AppContentView()
+			AppContentView(dataStore: .shared)
 		}
 	}
 }
