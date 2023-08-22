@@ -26,6 +26,13 @@ struct DataView: View {
 				Text("\(self.dateText)")
 					.foregroundStyle(.secondary)
 			}
+			if let note = dataStore.note {
+				HStack {
+					Text("Note")
+					Text(note)
+						.foregroundStyle(.secondary)
+				}
+			}
 		} header: {
 			Text("Data")
 		}
