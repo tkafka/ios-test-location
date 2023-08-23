@@ -10,15 +10,19 @@ import UserNotifications
 
 @main
 struct testLocationWatch_Watch_AppApp: App {
-	@WKApplicationDelegateAdaptor private var appDelegate: WatchExtensionDelegate
+	@WKApplicationDelegateAdaptor
+	private var appDelegate: WatchApplicationDelegate
 	
 	let notificationDelegate = NotificationDelegate()
 	
 	init() {
-		let center = UNUserNotificationCenter.current()
-		center.delegate = self.notificationDelegate
-		// requestNotificationAuthorization()
-		print("Notification delegate registered")
+		let application: WKApplication = .shared()
+		application.registerForRemoteNotifications()
+		
+		// let center = UNUserNotificationCenter.current()
+		// center.delegate = self.notificationDelegate
+		// // requestNotificationAuthorization()
+		// print("Notification delegate registered")
 	}
 
 	var body: some Scene {

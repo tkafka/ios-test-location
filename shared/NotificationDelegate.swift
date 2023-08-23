@@ -9,6 +9,13 @@ import Foundation
 import UserNotifications
 
 class NotificationDelegate: NSObject {
+	static func printToken(deviceToken: Data) {
+		let tokenParts = deviceToken.map { data in String(format: "%02.2hhx", data) }
+		let token = tokenParts.joined()
+		print("Push notifications: Got a device token: \(token)")
+		/// send the token to your server
+	}
+	
 	static func requestNotificationAuthorization() async -> Bool {
 		let center = UNUserNotificationCenter.current()
 		do {

@@ -48,10 +48,7 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 		_ application: UIApplication,
 		didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data
 	) {
-		let tokenParts = deviceToken.map { data in String(format: "%02.2hhx", data) }
-		let token = tokenParts.joined()
-		print("Push notifications: Got a device token: \(token)")
-		/// send the token to your server
+		NotificationDelegate.printToken(deviceToken: deviceToken)
 	}
 
 	func application(

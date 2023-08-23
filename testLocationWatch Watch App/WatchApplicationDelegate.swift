@@ -8,7 +8,12 @@
 import Foundation
 import WatchKit
 
-class WatchExtensionDelegate: NSObject, WKApplicationDelegate {
+class WatchApplicationDelegate: NSObject, WKApplicationDelegate {
+	func applicationDidFinishLaunching() {
+		// Perform any final initialization of your application.
+		// NotificationDelegate.requestNotificationAuthorization()
+	}
+	
 	/// handleUserActivity can arrive at any random moment (and usually after the main controller activated!)
 	func handleUserActivity(_ userInfo: [AnyHashable: Any]?) {
 		if let userInfo {
@@ -23,5 +28,13 @@ class WatchExtensionDelegate: NSObject, WKApplicationDelegate {
 		print("Received remote notification: \(userInfo.asJson())")
 		DataStore.shared.saveDataFromUserInfo(userInfo: userInfo)
 		return .newData
+	}
+	
+	func didRegisterForRemoteNotifications(withDeviceToken deviceToken: Data) {
+		NotificationDelegate.printToken(deviceToken: deviceToken)
+	}
+	
+	func didFailToRegisterForRemoteNotificationsWithError(_ error: Error) {
+		print("Push notifications: Error registering for push notifications: \(error.localizedDescription)")
 	}
 }
