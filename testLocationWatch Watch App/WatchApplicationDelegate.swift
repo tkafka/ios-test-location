@@ -6,12 +6,21 @@
 //
 
 import Foundation
+import UserNotifications
 import WatchKit
 
 class WatchApplicationDelegate: NSObject, WKApplicationDelegate {
+	let notificationDelegate = NotificationDelegate()
+
 	func applicationDidFinishLaunching() {
 		// Perform any final initialization of your application.
 		// NotificationDelegate.requestNotificationAuthorization()
+		
+		let application: WKApplication = .shared()
+		application.registerForRemoteNotifications()
+		
+		let center = UNUserNotificationCenter.current()
+		center.delegate = self.notificationDelegate
 	}
 	
 	/// handleUserActivity can arrive at any random moment (and usually after the main controller activated!)
@@ -38,3 +47,5 @@ class WatchApplicationDelegate: NSObject, WKApplicationDelegate {
 		print("Push notifications: Error registering for push notifications: \(error.localizedDescription)")
 	}
 }
+
+

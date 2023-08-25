@@ -6,25 +6,12 @@
 //
 
 import SwiftUI
-import UserNotifications
 
 @main
 struct testLocationWatch_Watch_AppApp: App {
 	@WKApplicationDelegateAdaptor
 	private var appDelegate: WatchApplicationDelegate
 	
-	let notificationDelegate = NotificationDelegate()
-	
-	init() {
-		let application: WKApplication = .shared()
-		application.registerForRemoteNotifications()
-		
-		// let center = UNUserNotificationCenter.current()
-		// center.delegate = self.notificationDelegate
-		// // requestNotificationAuthorization()
-		// print("Notification delegate registered")
-	}
-
 	var body: some Scene {
 		WindowGroup {
 			WatchContentView(dataStore: .shared)

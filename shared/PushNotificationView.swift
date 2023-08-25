@@ -11,6 +11,7 @@ import UserNotifications
 
 struct PushNotificationView: View {
 	@State var authorizationState: UNAuthorizationStatus?
+	@State var isRegisteredForRemoteNotifications: Bool = false
 	
 	public init() {
 		self._authorizationState = .init(initialValue: nil)
@@ -23,6 +24,7 @@ struct PushNotificationView: View {
 		
 		await MainActor.run {
 			self.authorizationState = authorizationState
+			self.isRegisteredForRemoteNotifications = NotificationDelegate.isRegisteredForNotifications()
 		}
 	}
 	
@@ -31,6 +33,7 @@ struct PushNotificationView: View {
 			if let authorizationState {
 				Text("Authorization state: \(authorizationState.debug())")
 			}
+			Text("Registered: \(isRegisteredForRemoteNotifications ? "Yes" : "No")")
 			
 			Button(action: {
 				Task {

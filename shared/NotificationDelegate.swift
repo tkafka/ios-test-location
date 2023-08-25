@@ -7,6 +7,11 @@
 
 import Foundation
 import UserNotifications
+#if os(watchOS)
+import WatchKit
+#else
+import UIKit
+#endif
 
 class NotificationDelegate: NSObject {
 	static func printToken(deviceToken: Data) {
@@ -29,6 +34,14 @@ class NotificationDelegate: NSObject {
 			print("Error requesting authorization: \(error.localizedDescription)")
 		}
 		return false
+	}
+	
+	static func isRegisteredForNotifications() -> Bool {
+		#if os(watchOS)
+		return WKApplication.shared().isRegisteredForRemoteNotifications
+		#else
+		return UIApplication.shared.isRegisteredForRemoteNotifications
+		#endif
 	}
 	
 	/*
