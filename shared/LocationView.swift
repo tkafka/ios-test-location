@@ -22,14 +22,14 @@ struct LocationView: View {
 			if let result {
 				switch result {
 				case let .success(location):
-					Text("Loc: \(location.debug())")
+					KeyValueView(key: "Loc", value: location.debug())
 				case let .failure(error):
-					Text("Error: \(error.localizedDescription)")
+					KeyValueView(key: "Error", value: error.localizedDescription)
 				}
 			}
 			
 			if let authorizationStatus {
-				Text("Loc auth: \(authorizationStatus.debug())")
+				KeyValueView(key: "Loc auth", value: authorizationStatus.debug())
 			}
 			
 			Button {

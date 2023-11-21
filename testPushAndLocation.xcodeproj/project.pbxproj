@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		3D546D142A7DB0E400492694 /* LocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D546D132A7DB0E400492694 /* LocationView.swift */; };
 		3D546D152A7DB0FF00492694 /* LocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D546D132A7DB0E400492694 /* LocationView.swift */; };
+		3D6A2E182B0CE91A0050B3C4 /* KeyValueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D6A2E172B0CE91A0050B3C4 /* KeyValueView.swift */; };
+		3D6A2E192B0CE91A0050B3C4 /* KeyValueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D6A2E172B0CE91A0050B3C4 /* KeyValueView.swift */; };
 		3D70C5DA2A936257003E2527 /* PushNotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D70C5D92A936257003E2527 /* PushNotificationView.swift */; };
 		3D70C5DB2A936257003E2527 /* PushNotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D70C5D92A936257003E2527 /* PushNotificationView.swift */; };
 		3D70C5DD2A936A4A003E2527 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D70C5DC2A936A4A003E2527 /* AppDelegate.swift */; };
@@ -84,6 +86,7 @@
 		3D546D162A7DB2AE00492694 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		3D546D172A7DB2B500492694 /* testPushAndLocationWatch-Watch-App-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "testPushAndLocationWatch-Watch-App-Info.plist"; sourceTree = SOURCE_ROOT; };
 		3D546D182A7DB33500492694 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		3D6A2E172B0CE91A0050B3C4 /* KeyValueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyValueView.swift; sourceTree = "<group>"; };
 		3D70C5D72A9361A3003E2527 /* testLocation.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = testLocation.entitlements; sourceTree = "<group>"; };
 		3D70C5D82A9361B1003E2527 /* testLocationWatch Watch App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "testLocationWatch Watch App.entitlements"; sourceTree = "<group>"; };
 		3D70C5D92A936257003E2527 /* PushNotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushNotificationView.swift; sourceTree = "<group>"; };
@@ -224,6 +227,7 @@
 				3D70C5E82A93A30A003E2527 /* DataStore.swift */,
 				3D70C5EB2A93A60F003E2527 /* DataView.swift */,
 				3DE41ADE2A94ADC9009E37E1 /* UtilsUIKit.swift */,
+				3D6A2E172B0CE91A0050B3C4 /* KeyValueView.swift */,
 			);
 			path = shared;
 			sourceTree = "<group>";
@@ -333,6 +337,7 @@
 			files = (
 				3D70C5E92A93A30A003E2527 /* DataStore.swift in Sources */,
 				3D78062B2A7DA98E0077C985 /* UtilsLocation.swift in Sources */,
+				3D6A2E182B0CE91A0050B3C4 /* KeyValueView.swift in Sources */,
 				3D70C5EC2A93A60F003E2527 /* DataView.swift in Sources */,
 				3D70C5DA2A936257003E2527 /* PushNotificationView.swift in Sources */,
 				3D7806342A7DACA50077C985 /* Constants.swift in Sources */,
@@ -369,6 +374,7 @@
 				3D7806382A7DAD4C0077C985 /* UtilsAsync.swift in Sources */,
 				3D70C5E32A937B7A003E2527 /* WatchApplicationDelegate.swift in Sources */,
 				3D7806202A7DA8C00077C985 /* LocationManager2.swift in Sources */,
+				3D6A2E192B0CE91A0050B3C4 /* KeyValueView.swift in Sources */,
 				3D7806322A7DAA0F0077C985 /* Logger.swift in Sources */,
 				3D7806352A7DACA50077C985 /* Constants.swift in Sources */,
 				3D78060E2A7DA8600077C985 /* testLocationWatchApp.swift in Sources */,

@@ -37,9 +37,11 @@ struct PushNotificationView: View {
 	public var body: some View {
 		Section(header: Text("Push notifications")) {
 			if let authorizationState {
-				Text("Authorization state: \(authorizationState.debug())")
+				KeyValueView(key: "Authorization state", value: "\(authorizationState.debug())")
 			}
-			Text("Registered: \(self.isRegisteredForRemoteNotifications ? "Yes" : "No")")
+			HStack {
+				KeyValueView(key: "Registered", value: self.isRegisteredForRemoteNotifications ? "Yes" : "No")
+			}
 			
 			if
 				let authorizationState,

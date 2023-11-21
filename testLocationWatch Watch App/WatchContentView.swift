@@ -13,18 +13,18 @@ struct WatchContentView: View {
 	@ObservedObject var dataStore: DataStore
 
 	var body: some View {
-		VStack {
-			Image(systemName: "globe")
-				.imageScale(.large)
-				.foregroundStyle(.tint)
+		// VStack {
+		// Image(systemName: "globe")
+		// 	.imageScale(.large)
+		// 	.foregroundStyle(.tint)
 			
-			Form {
-				PushNotificationView(dataStore: self.dataStore)
+		Form {
+			PushNotificationView(dataStore: self.dataStore)
 				
-				DataView(dataStore: self.dataStore)
+			DataView(dataStore: self.dataStore)
 				
-				LocationView(locationManager: self.locationManager)
-			}
+			LocationView(locationManager: self.locationManager)
 		}
+		// }
 	}
 }

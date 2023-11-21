@@ -21,17 +21,9 @@ struct DataView: View {
 	
 	var body: some View {
 		Section {
-			HStack {
-				Text("Last push")
-				Text("\(self.dateText)")
-					.foregroundStyle(.secondary)
-			}
+			KeyValueView(key: "Last push", value: self.dateText)
 			if let note = dataStore.note {
-				HStack {
-					Text("Note")
-					Text(note)
-						.foregroundStyle(.secondary)
-				}
+				KeyValueView(key: "Note", value: note)
 			}
 		} header: {
 			Text("Data")
