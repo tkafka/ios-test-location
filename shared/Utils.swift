@@ -68,19 +68,32 @@ public extension Error {
 
 extension UNAuthorizationStatus: DebugPrintable {
 	public func debug() -> String {
-		switch self {
+		return switch self {
 		case .notDetermined:
-			return "notDetermined"
+			"notDetermined"
 		case .denied:
-			return "denied"
+			"denied"
 		case .authorized:
-			return "authorized"
+			"authorized"
 		case .provisional:
-			return "provisional"
+			"provisional"
 		case .ephemeral:
-			return "ephemeral"
+			"ephemeral"
 		@unknown default:
-			return "unknown(\(self.rawValue))"
+			"unknown(\(self.rawValue))"
+		}
+	}
+}
+
+public extension UNAuthorizationStatus {
+	func canPush() -> Bool {
+		return switch self {
+		case .authorized, .provisional, .ephemeral:
+			true
+		case .notDetermined, .denied:
+			false
+		@unknown default:
+			false
 		}
 	}
 }

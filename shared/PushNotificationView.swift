@@ -41,7 +41,11 @@ struct PushNotificationView: View {
 			}
 			Text("Registered: \(self.isRegisteredForRemoteNotifications ? "Yes" : "No")")
 			
-			if let devicePushTokenStr = dataStore.devicePushToken?.asTokenString() {
+			if
+				let authorizationState,
+				authorizationState.canPush(),
+				let devicePushTokenStr = dataStore.devicePushToken?.asTokenString()
+			{
 				#if os(iOS)
 				Button(action: {
 					let pasteboard = UIPasteboard.general
@@ -79,7 +83,7 @@ struct PushNotificationView: View {
 				Text("Request push permission")
 			})
 		}
-		.onChange(of: dataStore.devicePushToken, perform: { newToken in
+		.onChange(of: self.dataStore.devicePushToken, perform: { _ in
 			/// reset the copied flag
 			self.copied = false
 		})
