@@ -27,7 +27,7 @@ class WatchApplicationDelegate: NSObject, WKApplicationDelegate {
 	func handleUserActivity(_ userInfo: [AnyHashable: Any]?) {
 		if let userInfo {
 			print("handleUserActivity: \(userInfo.asJson())")
-			DataStore.shared.saveDataFromUserInfo(userInfo: userInfo)
+			let _ = DataStore.shared.saveDataFromUserInfo(userInfo: userInfo)
 		} else {
 			print("handleUserActivity: no data")
 		}
@@ -35,8 +35,11 @@ class WatchApplicationDelegate: NSObject, WKApplicationDelegate {
 	
 	func didReceiveRemoteNotification(_ userInfo: [AnyHashable: Any]) async -> WKBackgroundFetchResult {
 		print("Received remote notification: \(userInfo.asJson())")
-		DataStore.shared.saveDataFromUserInfo(userInfo: userInfo)
-		return .newData
+		if DataStore.shared.saveDataFromUserInfo(userInfo: userInfo) {
+			return .newData
+		} else {
+			return .noData
+		}
 	}
 	
 	func didRegisterForRemoteNotifications(withDeviceToken deviceToken: Data) {

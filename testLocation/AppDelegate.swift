@@ -21,22 +21,21 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 		Task {
 			let center = UNUserNotificationCenter.current()
 			let authorizationStatus = await center.notificationSettings().authorizationStatus
-								
-			// if authorizationStatus == .authorized {
-			await MainActor.run {
-				application.registerForRemoteNotifications()
-				print("Registered for remote notifications")
+			
+			if authorizationStatus.canPush() {
+				await MainActor.run {
+					application.registerForRemoteNotifications()
+					print("Registered for remote notifications")
+				}
+			} else {
+				print("Not authorized (\(authorizationStatus.debug())), not registering for remote notifications.")
 			}
-			// } else {
-			//	print("Not authorized (\(authorizationStatus.debug())), not registering for remote notifications.")
-			// }
 		}
 		
 		let notificationOption = launchOptions?[.remoteNotification]
 		if let notification = notificationOption as? [String: AnyObject] {
-			// TODO: Parse date here as well!
 			print("Application.didFinishLaunchingWithOptions: \(notification.asJson())")
-			DataStore.shared.saveDataFromUserInfo(userInfo: notification)
+			let _ = DataStore.shared.saveDataFromUserInfo(userInfo: notification)
 		}
 		
 		return true
@@ -64,7 +63,10 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 	/// If your app was running either in the foreground or the background, the system notifies your app by calling `application(_:didReceiveRemoteNotification:fetchCompletionHandler:)`. When the user opens the app by tapping the push notification, iOS may call this method again, so you can update the UI and display relevant information.
 	func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable: Any]) async -> UIBackgroundFetchResult {
 		print("Received remote notification: \(userInfo.asJson())")
-		DataStore.shared.saveDataFromUserInfo(userInfo: userInfo)
-		return .newData
+		if DataStore.shared.saveDataFromUserInfo(userInfo: userInfo) {
+			return .newData
+		} else {
+			return .noData
+		}
 	}
 }

@@ -54,7 +54,7 @@ public class DataStore: ObservableObject {
 }
 
 public extension DataStore {
-	func saveDataFromUserInfo(userInfo: [AnyHashable: Any]) {
+	func saveDataFromUserInfo(userInfo: [AnyHashable: Any]) -> Bool {
 		var saved = false
 		
 		if
@@ -75,5 +75,7 @@ public extension DataStore {
 		if saved {
 			triggerFeedback()
 		}
+		
+		return saved
 	}
 }
