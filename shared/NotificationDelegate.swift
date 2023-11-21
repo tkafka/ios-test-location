@@ -14,10 +14,8 @@ import UIKit
 #endif
 
 class NotificationDelegate: NSObject {
-	static func printToken(deviceToken: Data) {
-		let tokenParts = deviceToken.map { data in String(format: "%02.2hhx", data) }
-		let token = tokenParts.joined()
-		print("Push notifications: Got a device token: \(token)")
+	static func addToken(deviceToken: Data) {
+		print("Push notifications: Adding a device token: \(deviceToken.asTokenString()) (TODO)")
 		/// send the token to your server
 	}
 	

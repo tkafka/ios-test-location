@@ -10,6 +10,7 @@ import Foundation
 public enum DataKey: String {
 	case date
 	case note
+	case devicePushToken
 }
 
 public class DataStore: ObservableObject {
@@ -28,6 +29,7 @@ public class DataStore: ObservableObject {
 
 	@Published var date: Date? = nil
 	@Published var note: String? = nil
+	@Published var devicePushToken: Data? = nil
 	
 	public func setDate(_ value: Date) {
 		self.defaults.set(value, forKey: DataKey.date.rawValue)
@@ -39,9 +41,15 @@ public class DataStore: ObservableObject {
 		self.note = value
 	}
 	
+	public func setDevicePushToken(_ value: Data) {
+		self.defaults.set(value, forKey: DataKey.devicePushToken.rawValue)
+		self.devicePushToken = value
+	}
+	
 	public func load() {
 		self.date = self.defaults.object(forKey: DataKey.date.rawValue) as? Date
 		self.note = self.defaults.string(forKey: DataKey.note.rawValue)
+		self.devicePushToken = self.defaults.data(forKey: DataKey.devicePushToken.rawValue)
 	}
 }
 

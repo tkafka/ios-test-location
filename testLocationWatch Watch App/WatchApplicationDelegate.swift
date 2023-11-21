@@ -40,12 +40,11 @@ class WatchApplicationDelegate: NSObject, WKApplicationDelegate {
 	}
 	
 	func didRegisterForRemoteNotifications(withDeviceToken deviceToken: Data) {
-		NotificationDelegate.printToken(deviceToken: deviceToken)
+		DataStore.shared.setDevicePushToken(deviceToken)
+		NotificationDelegate.addToken(deviceToken: deviceToken)
 	}
 	
 	func didFailToRegisterForRemoteNotificationsWithError(_ error: Error) {
 		print("Push notifications: Error registering for push notifications: \(error.localizedDescription)")
 	}
 }
-
-

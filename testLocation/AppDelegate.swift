@@ -48,7 +48,8 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 		_ application: UIApplication,
 		didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data
 	) {
-		NotificationDelegate.printToken(deviceToken: deviceToken)
+		DataStore.shared.setDevicePushToken(deviceToken)
+		NotificationDelegate.addToken(deviceToken: deviceToken)
 	}
 
 	func application(

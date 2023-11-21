@@ -127,3 +127,11 @@ extension String {
 		return date
 	}
 }
+
+extension Data {
+	func asTokenString() -> String {
+		let tokenParts = self.map { data in String(format: "%02.2hhx", data) }
+		let token = tokenParts.joined()
+		return token
+	}
+}

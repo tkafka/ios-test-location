@@ -18,10 +18,12 @@ struct OpenSettingsView: View {
 	}
 		
 	public var body: some View {
-		Button(action: {
-			self.openSettings()
-		}, label: {
-			Text("App settings")
-		})
+		Section(header: Text("Settings")) {
+			Button(action: {
+				self.openSettings()
+			}, label: {
+				Text("Open app settings")
+			})
+		}
 	}
 }

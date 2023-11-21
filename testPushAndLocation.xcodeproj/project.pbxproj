@@ -30,7 +30,7 @@
 		3D7806102A7DA8600077C985 /* WatchContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D78060F2A7DA8600077C985 /* WatchContentView.swift */; };
 		3D7806122A7DA8650077C985 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D7806112A7DA8650077C985 /* Assets.xcassets */; };
 		3D7806152A7DA8650077C985 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D7806142A7DA8650077C985 /* Preview Assets.xcassets */; };
-		3D7806182A7DA8650077C985 /* testLocationWatch Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 3D78060B2A7DA8600077C985 /* testLocationWatch Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		3D7806182A7DA8650077C985 /* testPushAndLocationWatch Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 3D78060B2A7DA8600077C985 /* testPushAndLocationWatch Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		3D78061F2A7DA8C00077C985 /* LocationManager2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D78061E2A7DA8C00077C985 /* LocationManager2.swift */; };
 		3D7806202A7DA8C00077C985 /* LocationManager2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D78061E2A7DA8C00077C985 /* LocationManager2.swift */; };
 		3D7806222A7DA8EB0077C985 /* LocationResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7806212A7DA8EB0077C985 /* LocationResult.swift */; };
@@ -72,7 +72,7 @@
 			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
 			dstSubfolderSpec = 16;
 			files = (
-				3D7806182A7DA8650077C985 /* testLocationWatch Watch App.app in Embed Watch Content */,
+				3D7806182A7DA8650077C985 /* testPushAndLocationWatch Watch App.app in Embed Watch Content */,
 			);
 			name = "Embed Watch Content";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -82,7 +82,7 @@
 /* Begin PBXFileReference section */
 		3D546D132A7DB0E400492694 /* LocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationView.swift; sourceTree = "<group>"; };
 		3D546D162A7DB2AE00492694 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		3D546D172A7DB2B500492694 /* testLocationWatch-Watch-App-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "testLocationWatch-Watch-App-Info.plist"; sourceTree = SOURCE_ROOT; };
+		3D546D172A7DB2B500492694 /* testPushAndLocationWatch-Watch-App-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "testPushAndLocationWatch-Watch-App-Info.plist"; sourceTree = SOURCE_ROOT; };
 		3D546D182A7DB33500492694 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		3D70C5D72A9361A3003E2527 /* testLocation.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = testLocation.entitlements; sourceTree = "<group>"; };
 		3D70C5D82A9361B1003E2527 /* testLocationWatch Watch App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "testLocationWatch Watch App.entitlements"; sourceTree = "<group>"; };
@@ -94,13 +94,13 @@
 		3D70C5E62A9380BF003E2527 /* OpenSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenSettingsView.swift; sourceTree = "<group>"; };
 		3D70C5E82A93A30A003E2527 /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
 		3D70C5EB2A93A60F003E2527 /* DataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataView.swift; sourceTree = "<group>"; };
-		3D7805F42A7DA8470077C985 /* testLocation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testLocation.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3D7805F42A7DA8470077C985 /* testPushAndLocation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testPushAndLocation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D7805F72A7DA8470077C985 /* testLocationApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testLocationApp.swift; sourceTree = "<group>"; };
 		3D7805F92A7DA8470077C985 /* AppContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppContentView.swift; sourceTree = "<group>"; };
 		3D7805FB2A7DA8470077C985 /* LocationItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationItem.swift; sourceTree = "<group>"; };
 		3D7805FD2A7DA8490077C985 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3D7806002A7DA8490077C985 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		3D78060B2A7DA8600077C985 /* testLocationWatch Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "testLocationWatch Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3D78060B2A7DA8600077C985 /* testPushAndLocationWatch Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "testPushAndLocationWatch Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D78060D2A7DA8600077C985 /* testLocationWatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testLocationWatchApp.swift; sourceTree = "<group>"; };
 		3D78060F2A7DA8600077C985 /* WatchContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchContentView.swift; sourceTree = "<group>"; };
 		3D7806112A7DA8650077C985 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -153,8 +153,8 @@
 		3D7805F52A7DA8470077C985 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3D7805F42A7DA8470077C985 /* testLocation.app */,
-				3D78060B2A7DA8600077C985 /* testLocationWatch Watch App.app */,
+				3D7805F42A7DA8470077C985 /* testPushAndLocation.app */,
+				3D78060B2A7DA8600077C985 /* testPushAndLocationWatch Watch App.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -185,7 +185,7 @@
 			isa = PBXGroup;
 			children = (
 				3D70C5D82A9361B1003E2527 /* testLocationWatch Watch App.entitlements */,
-				3D546D172A7DB2B500492694 /* testLocationWatch-Watch-App-Info.plist */,
+				3D546D172A7DB2B500492694 /* testPushAndLocationWatch-Watch-App-Info.plist */,
 				3D78060D2A7DA8600077C985 /* testLocationWatchApp.swift */,
 				3D70C5E22A937B7A003E2527 /* WatchApplicationDelegate.swift */,
 				3D78060F2A7DA8600077C985 /* WatchContentView.swift */,
@@ -231,9 +231,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		3D7805F32A7DA8470077C985 /* testLocation */ = {
+		3D7805F32A7DA8470077C985 /* testPushAndLocation */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3D7806042A7DA8490077C985 /* Build configuration list for PBXNativeTarget "testLocation" */;
+			buildConfigurationList = 3D7806042A7DA8490077C985 /* Build configuration list for PBXNativeTarget "testPushAndLocation" */;
 			buildPhases = (
 				3D7805F02A7DA8470077C985 /* Sources */,
 				3D7805F12A7DA8470077C985 /* Frameworks */,
@@ -245,14 +245,14 @@
 			dependencies = (
 				3D7806172A7DA8650077C985 /* PBXTargetDependency */,
 			);
-			name = testLocation;
+			name = testPushAndLocation;
 			productName = testLocation;
-			productReference = 3D7805F42A7DA8470077C985 /* testLocation.app */;
+			productReference = 3D7805F42A7DA8470077C985 /* testPushAndLocation.app */;
 			productType = "com.apple.product-type.application";
 		};
-		3D78060A2A7DA8600077C985 /* testLocationWatch Watch App */ = {
+		3D78060A2A7DA8600077C985 /* testPushAndLocationWatch Watch App */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3D7806192A7DA8650077C985 /* Build configuration list for PBXNativeTarget "testLocationWatch Watch App" */;
+			buildConfigurationList = 3D7806192A7DA8650077C985 /* Build configuration list for PBXNativeTarget "testPushAndLocationWatch Watch App" */;
 			buildPhases = (
 				3D7806072A7DA8600077C985 /* Sources */,
 				3D7806082A7DA8600077C985 /* Frameworks */,
@@ -262,9 +262,9 @@
 			);
 			dependencies = (
 			);
-			name = "testLocationWatch Watch App";
+			name = "testPushAndLocationWatch Watch App";
 			productName = "testLocationWatch Watch App";
-			productReference = 3D78060B2A7DA8600077C985 /* testLocationWatch Watch App.app */;
+			productReference = 3D78060B2A7DA8600077C985 /* testPushAndLocationWatch Watch App.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -285,7 +285,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 3D7805EF2A7DA8470077C985 /* Build configuration list for PBXProject "testLocation" */;
+			buildConfigurationList = 3D7805EF2A7DA8470077C985 /* Build configuration list for PBXProject "testPushAndLocation" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -298,8 +298,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				3D7805F32A7DA8470077C985 /* testLocation */,
-				3D78060A2A7DA8600077C985 /* testLocationWatch Watch App */,
+				3D7805F32A7DA8470077C985 /* testPushAndLocation */,
+				3D78060A2A7DA8600077C985 /* testPushAndLocationWatch Watch App */,
 			);
 		};
 /* End PBXProject section */
@@ -386,7 +386,7 @@
 /* Begin PBXTargetDependency section */
 		3D7806172A7DA8650077C985 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 3D78060A2A7DA8600077C985 /* testLocationWatch Watch App */;
+			target = 3D78060A2A7DA8600077C985 /* testPushAndLocationWatch Watch App */;
 			targetProxy = 3D7806162A7DA8650077C985 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -525,6 +525,8 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = testLocation/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Test push";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "We need to know where you are.";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We need to know where you are.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -560,6 +562,8 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = testLocation/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Test push";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "We need to know where you are.";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We need to know where you are.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -593,12 +597,12 @@
 				DEVELOPMENT_TEAM = B2VSNTJJ6L;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "testLocationWatch-Watch-App-Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = testLocationWatch;
+				INFOPLIST_FILE = "testPushAndLocationWatch-Watch-App-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Test push";
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "We need to know where you are.";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We need to know where you are.";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.tomaskafka.testLocation;
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.tomaskafka.testPushAndLocation;
 				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -628,12 +632,12 @@
 				DEVELOPMENT_TEAM = B2VSNTJJ6L;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "testLocationWatch-Watch-App-Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = testLocationWatch;
+				INFOPLIST_FILE = "testPushAndLocationWatch-Watch-App-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Test push";
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "We need to know where you are.";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We need to know where you are.";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.tomaskafka.testLocation;
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.tomaskafka.testPushAndLocation;
 				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -654,7 +658,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3D7805EF2A7DA8470077C985 /* Build configuration list for PBXProject "testLocation" */ = {
+		3D7805EF2A7DA8470077C985 /* Build configuration list for PBXProject "testPushAndLocation" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3D7806022A7DA8490077C985 /* Debug */,
@@ -663,7 +667,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3D7806042A7DA8490077C985 /* Build configuration list for PBXNativeTarget "testLocation" */ = {
+		3D7806042A7DA8490077C985 /* Build configuration list for PBXNativeTarget "testPushAndLocation" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3D7806052A7DA8490077C985 /* Debug */,
@@ -672,7 +676,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3D7806192A7DA8650077C985 /* Build configuration list for PBXNativeTarget "testLocationWatch Watch App" */ = {
+		3D7806192A7DA8650077C985 /* Build configuration list for PBXNativeTarget "testPushAndLocationWatch Watch App" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3D78061A2A7DA8650077C985 /* Debug */,

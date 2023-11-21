@@ -20,7 +20,7 @@ struct AppContentView: View {
 				.foregroundStyle(.tint)
 			
 			Form {
-				PushNotificationView()
+				PushNotificationView(dataStore: self.dataStore)
 				
 				DataView(dataStore: self.dataStore)
 				
